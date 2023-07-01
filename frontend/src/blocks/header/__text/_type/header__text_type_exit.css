@@ -1,0 +1,10 @@
+.header__text_type_exit {
+  color: #a9a9a9;
+  background-color: transparent;
+  border: none;
+}
+
+.header__text_type_exit:hover {
+  cursor: pointer;
+}
+

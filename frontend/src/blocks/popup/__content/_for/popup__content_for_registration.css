@@ -1,0 +1,8 @@
+.popup__content_for_registration {
+  max-width: 430px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+}

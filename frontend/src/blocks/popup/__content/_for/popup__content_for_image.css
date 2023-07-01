@@ -1,0 +1,7 @@
+.popup__content_for_image {
+  background-color: transparent;
+  top: 50%;
+  left: 0;
+  max-width: max-content;
+  padding-top: 10px;
+}

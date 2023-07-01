@@ -1,0 +1,11 @@
+.popup__input-container_for_avatar {
+  padding: 0;
+  margin: 0 auto;
+  width: calc(100% - 72px);
+}
+
+@media screen and (max-width: 720px) {
+  .popup__input-container_for_avatar {
+    width: calc(100% - 44px);
+  }
+}
