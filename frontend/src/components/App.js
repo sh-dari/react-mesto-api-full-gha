@@ -40,12 +40,9 @@ function App() {
     const token = localStorage.getItem('jwt');
     if (token) {
       auth.checkToken()
-      .then((res) => {
-        console.log(res)
-        if (res){
-          setLoggedIn(true);
-          navigate("/");
-        }
+      .then(() => {
+        setLoggedIn(true);
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -55,7 +52,7 @@ function App() {
 
   useEffect(() => {
     handleTokenCheck();
-  }, [handleTokenCheck, loggedIn]);
+  }, [handleTokenCheck]);
 
   useEffect(() => {
     if (loggedIn) {
