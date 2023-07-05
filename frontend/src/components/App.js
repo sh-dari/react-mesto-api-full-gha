@@ -44,7 +44,7 @@ function App() {
         console.log(res)
         if (res){
           setLoggedIn(true);
-          navigate("/", {replace: true});
+          navigate("/");
         }
       })
       .catch((err) => {
