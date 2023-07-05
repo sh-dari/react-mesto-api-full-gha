@@ -38,9 +38,9 @@ function App() {
 
   const handleTokenCheck = useCallback(() => {
     if (localStorage.getItem('jwt')){
+      console.log(localStorage.getItem('jwt'))
       auth.checkToken()
       .then((res) => {
-        console.log(res)
         if (res){
           setLoggedIn(true);
           navigate("/", {replace: true});
@@ -181,6 +181,8 @@ function App() {
       }
     })
     .catch((err) => {
+      setSuccessRegistration(false);
+      setIsRegistrationPopupOpen(true);
       console.log(err);
     });
   };
