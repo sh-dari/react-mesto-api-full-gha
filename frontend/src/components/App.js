@@ -37,10 +37,11 @@ function App() {
   const navigate = useNavigate();
 
   const handleTokenCheck = useCallback(() => {
-    if (localStorage.getItem('jwt')){
-      console.log(localStorage.getItem('jwt'))
+    const token = localStorage.getItem('jwt');
+    if (token) {
       auth.checkToken()
       .then((res) => {
+        console.log(res)
         if (res){
           setLoggedIn(true);
           navigate("/", {replace: true});
@@ -160,10 +161,6 @@ function App() {
     });
   };
 
-  const handleLogin = () => {
-    setLoggedIn(true);
-  };
-
   const handleEmailClean = () => {
     setLoggedIn(false);
     setUserEmail("");
@@ -176,7 +173,7 @@ function App() {
         localStorage.setItem('jwt', data.token);
         setUserEmail(values.email);
         setValues({password: '', email: ''});
-        handleLogin();
+        setLoggedIn(true);
         navigate('/', {replace: true});
       }
     })
@@ -204,7 +201,7 @@ function App() {
   };
 
   return (
-    <AppContext.Provider value={ {loggedIn, handleLogin } }>
+    <AppContext.Provider value={ {loggedIn } }>
       <CurrentUserContext.Provider value={currentUser}>
         <div className="page">
           <Header userEmail={userEmail} handleEmailClean={handleEmailClean}/>
