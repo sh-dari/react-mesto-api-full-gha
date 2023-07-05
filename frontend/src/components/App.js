@@ -54,7 +54,7 @@ function App() {
 
   useEffect(() => {
     handleTokenCheck();
-  }, [handleTokenCheck]);
+  }, [handleTokenCheck, loggedIn]);
 
   useEffect(() => {
     if (loggedIn) {
