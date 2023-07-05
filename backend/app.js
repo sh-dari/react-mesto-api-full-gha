@@ -26,7 +26,7 @@ app.use(limiter);
 mongoose.connect(DB_URL, {});
 
 const corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: 'http://sh.dari.nomoreparties.sbs',
   credentials: true,
 };
 app.use(cors(corsOptions));
@@ -39,7 +39,7 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.use('/', mainRoute);
+app.use('/api', mainRoute);
 
 app.use(errorLogger);
 
