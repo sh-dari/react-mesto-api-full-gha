@@ -40,6 +40,7 @@ function App() {
     if (localStorage.getItem('jwt')){
       auth.checkToken()
       .then((res) => {
+        console.log(res)
         if (res){
           setLoggedIn(true);
           navigate("/", {replace: true});
@@ -173,8 +174,7 @@ function App() {
     .then((data) => {
       if (data){
         localStorage.setItem('jwt', data.token);
-        console.log(data)
-        setUserEmail(data.email);
+        setUserEmail(values.email);
         setValues({password: '', email: ''});
         handleLogin();
         navigate('/', {replace: true});
