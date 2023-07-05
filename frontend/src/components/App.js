@@ -39,10 +39,12 @@ function App() {
   const handleTokenCheck = useCallback(() => {
     const token = localStorage.getItem('jwt');
     if (token) {
-      auth.checkToken()
-      .then(() => {
-        setLoggedIn(true);
-        navigate("/");
+      auth.checkToken(token)
+      .then((res) => {
+        if (res){
+          setLoggedIn(true);
+          navigate("/");
+        }
       })
       .catch((err) => {
         console.log(err);
