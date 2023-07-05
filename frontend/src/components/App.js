@@ -169,10 +169,10 @@ function App() {
     auth.authorize(values.password, values.email)
     .then((data) => {
       if (data){
+        setLoggedIn(true);
         localStorage.setItem('jwt', data.token);
         setUserEmail(values.email);
         setValues({password: '', email: ''});
-        setLoggedIn(true);
         navigate('/');
       }
     })
