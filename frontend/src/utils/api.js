@@ -111,7 +111,7 @@ class Api {
 
 }
 const api = new Api({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'http://sh.dari.nomoreparties.sbs/',
   headers: {
     authorization: 'a356cdb4-b562-4193-8871-80b2cea38756',
     'Content-Type': 'application/json'
