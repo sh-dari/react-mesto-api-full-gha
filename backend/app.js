@@ -39,7 +39,7 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.use('/api', mainRoute);
+app.use('/', mainRoute);
 
 app.use(errorLogger);
 

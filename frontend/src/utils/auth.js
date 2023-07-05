@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://sh.dari.nomoreparties.sbs';
+export const BASE_URL = 'http://api.sh.dari.nomoreparties.sbs';
 
 const getFetchAnswer = (result) => {
   if (result.ok) {
