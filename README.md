@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP 62.84.113.217
+IP 158.160.37.133
 
 Frontend https://sh.dari.nomoreparties.sbs
 

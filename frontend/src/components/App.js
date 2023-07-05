@@ -189,6 +189,7 @@ function App() {
     auth.register(values.password, values.email)
     .then((data) => {
       setSuccessRegistration(true);
+      navigate('/sign-in', {replace: true});
       return data
     })
     .catch(err => {
