@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/sh-dari/react-mesto-api-full-gha
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP 62.84.113.217
 
-Frontend https://...
+Frontend https://sh.dari.nomoreparties.sbs
 
-Backend https://...
+Backend https://api.sh.dari.nomoreparties.sbs
