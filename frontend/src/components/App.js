@@ -38,6 +38,7 @@ function App() {
 
   const handleTokenCheck = useCallback(() => {
     const token = localStorage.getItem('jwt');
+    console.log(token)
     if (token) {
       auth.checkToken()
       .then((res) => {
