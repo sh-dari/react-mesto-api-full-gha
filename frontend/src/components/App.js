@@ -38,14 +38,11 @@ function App() {
 
   const handleTokenCheck = useCallback(() => {
     if (localStorage.getItem('jwt')){
-      const jwt = localStorage.getItem('jwt');
-      auth.checkToken(jwt)
+      auth.checkToken()
       .then((res) => {
         if (res){
           setLoggedIn(true);
           navigate("/", {replace: true});
-          console.log(res)
-          setUserEmail(res.email);
         }
       })
       .catch((err) => {
@@ -176,7 +173,8 @@ function App() {
     .then((data) => {
       if (data){
         localStorage.setItem('jwt', data.token);
-        console.log(localStorage.getItem('jwt'));
+        console.log(data)
+        setUserEmail(data.email);
         setValues({password: '', email: ''});
         handleLogin();
         navigate('/', {replace: true});
