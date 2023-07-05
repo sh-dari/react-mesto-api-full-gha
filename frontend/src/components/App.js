@@ -44,7 +44,7 @@ function App() {
         if (res){
           setLoggedIn(true);
           navigate("/", {replace: true});
-          setUserEmail(res.data.email);
+          setUserEmail(res.email);
         }
       })
       .catch((err) => {
@@ -174,6 +174,7 @@ function App() {
     auth.authorize(values.password, values.email)
     .then((data) => {
       if (data){
+        localStorage.setItem('jwt', data.token);
         setValues({password: '', email: ''});
         handleLogin();
         navigate('/', {replace: true});
