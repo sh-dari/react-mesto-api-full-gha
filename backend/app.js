@@ -26,7 +26,7 @@ app.use(limiter);
 mongoose.connect(DB_URL, {});
 
 const corsOptions = {
-  origin: 'http://sh.dari.nomoreparties.sbs',
+  origin: 'https://sh.dari.nomoreparties.sbs',
   credentials: true,
 };
 app.use(cors(corsOptions));
