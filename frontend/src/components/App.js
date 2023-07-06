@@ -43,6 +43,7 @@ function App() {
       .then((res) => {
         if (res){
           setLoggedIn(true);
+          setUserEmail(res.email);
           navigate("/");
         }
       })
